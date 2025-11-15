@@ -20,8 +20,6 @@ RAIO_TERRA_KM = 6371
 # Ex: Custo médio estimado de tempo/combustível por km.
 CUSTO_MINIMO_POR_KM = 0.5
 
-# --- 2. Funções de Cálculo ---
-
 
 def haversine(coord1, coord2):
     """Calcula Haversine"""
