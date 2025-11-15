@@ -4,15 +4,15 @@ AIRPORTS = {
     'CWB': (-25.5333, -49.1806),  # Curitiba
     'GIG': (-22.8122, -43.2497),  # Rio de Janeiro/Galeão (Destino)
     'GRU': (-23.4356, -46.4731),  # São Paulo/Guarulhos
-    'BSB': (-15.8692, -47.9217),  # Brasília
+    'FLN': (-27.4013, -48.3309),  # Florianopolis
     'CNF': (-19.6322, -43.9719),  # Confins/Belo Horizonte
 }
 AIR_ROUTES = {
-    'CWB': {'GRU': 100, 'CNF': 250},
-    'GRU': {'CWB': 90, 'GIG': 150, 'BSB': 300},
-    'CNF': {'GRU': 240, 'BSB': 180, 'GIG': 220},
-    'BSB': {'GRU': 310, 'CNF': 190, 'GIG': 350},
-    'GIG': {},
+    'CWB': {'GRU': 100, 'CNF': 250, 'FLN': 80},
+    'GRU': {'CWB': 90, 'GIG': 150, 'FLN': 300},
+    'CNF': {'GRU': 240, 'FLN': 180, 'GIG': 220},
+    'FLN': {'GRU': 310, 'CNF': 190, 'GIG': 100},
+    'GIG': {}
 }
 
 
@@ -56,11 +56,11 @@ def heuristic_function_h(node, destination):
 
     fator_vento = 1.0  # Fator neutro
 
-    # Aprimoramento: Simule que a rota reta (Haversine) BSB -> GIG é favorável.
-    if node == 'BSB' and destination == 'GIG':
+    # Aprimoramento: Simule que a rota reta (Haversine) FLN -> GIG é favorável.
+    if node == 'FLN' and destination == 'GIG':
         fator_vento = 0.95  # Estimativa de 5% de economia de custo/tempo.
-    # Outro aprimoramento: Simule que a rota reta CWB -> BSB é desfavorável.
-    elif node == 'CWB' and destination == 'BSB':
+    # Outro aprimoramento: Simule que a rota reta CWB -> FLN é desfavorável.
+    elif node == 'CWB' and destination == 'FLN':
         fator_vento = 1.05  # Estimativa de 5% de custo/tempo adicional.
 
     estimated_cost = distance_km * CUSTO_MINIMO_POR_KM * fator_vento
