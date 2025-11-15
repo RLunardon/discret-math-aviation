@@ -2,7 +2,7 @@ import sys
 import itertools
 
 INF = 99999
-ORDEMMG = 16
+ORDEMMG = 11
 
 
 class Aresta:
