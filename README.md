@@ -27,9 +27,9 @@ O algoritmo de Floyd-Warshall resolve o problema do menor caminho entre todos os
 
 ~> A complexidade cúbica é direta, resultado da sua abordagem de programação dinâmica. O algoritmo é estruturado em três laços aninhados:
 
-~> O laço externo itera sobre cada vértice ($|V|$), usando-o como um possível vértice intermediário ($k$).
+O laço externo itera sobre cada vértice ($|V|$), usando-o como um possível vértice intermediário ($k$).
 
-~>Os dois laços internos iteram sobre todos os pares de vértices de origem ($i$) e destino ($j$).Como o passo de comparação e atualização dentro do loop mais interno é executado $|V| \times |V| \times |V|$ vezes, o custo é invariavelmente $O(|V|^3)$.
+Os dois laços internos iteram sobre todos os pares de vértices de origem ($i$) e destino ($j$).Como o passo de comparação e atualização dentro do loop mais interno é executado $|V| \times |V| \times |V|$ vezes, o custo é invariavelmente $O(|V|^3)$.
 
 ## 3. Algoritmo A* (A-estrela):
 
