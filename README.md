@@ -1,4 +1,4 @@
-# discret math aviation
+# Discret Math Aviation
 Códigos Python utilizados no trabalho de Discreta/Aviação
 
 ## APLICAÇÃO DE TEORIA DOS GRAFOS EM ROTAS AÉREAS
