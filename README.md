@@ -45,7 +45,7 @@ Biblioteca Principal: sys, itertools, heapq e math
 Documentação: LaTeX
 
 ## COMO USAR
-Após clonar o repositório e instalar as dependências, altere os valores e pesos dos vertices e arestas dentro do codigo
+Após clonar o repositório e instalar as dependências, altere os valores e pesos dos vertices e arestas dentro do codigo.
 
 ## DOCUMENTAÇÃO
 O trabalho completo detalhando a metodologia e os resultados está disponível em PDF na pasta docs/.
